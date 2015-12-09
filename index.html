@@ -1,0 +1,39 @@
+---
+layout: default
+---
+{% for page in site.pages %}
+  {% if page.title %}
+    {% if page.title != "Events" %}
+      <section id="{{ page.title }}" class="landing-content">
+        <div class="wrapper">
+            <header>
+            <h2>{{ page.title }}</h2>
+          </header>
+          <div class="content">
+            {{ page.content }}
+          </div>
+        </div>
+      </section>
+    {% endif %}
+    {% if page.title == "Events" %}
+    <section id="{{ page.title }}" class="landing-content">
+        <div class="wrapper">
+            <header>
+            <h2>{{ page.title }}</h2>
+          </header>
+          <div class="content">
+            <ul class="post-list">
+              {% for post in site.posts %}
+              <li>
+                <h3>
+                  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"> {{ post.title }} <span class="post-meta"> - {{ post.date | date: "%b %-d, %Y" }}</span></a>
+                </h3>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+     </section>
+    {% endif %}
+  {% endif %}
+{% endfor %}

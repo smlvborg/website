@@ -1,0 +1,9 @@
+// MerriWeather
+@include font-face("MerriWeather", "/fonts/merriweather/merriweather-regular-webfont", $file-formats: eot woff2 woff svg ttf);
+@include font-face("MerriWeather", "/fonts/merriweather/merriweather-bold-webfont", bold);
+@include font-face("MerriWeather", "/fonts/merriweather/merriweather-italic-webfont", italic);
+
+// Open Sans
+@include font-face("OpenSans", "/fonts/open-sans/OpenSans-Regular", $file-formats: eot woff2 woff svg ttf);
+@include font-face("OpenSans", "/fonts/open-sans/OpenSans-Regular", italic);
+@include font-face("OpenSans", "/fonts/open-sans/OpenSans-Regular", bold);

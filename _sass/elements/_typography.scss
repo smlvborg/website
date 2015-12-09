@@ -1,0 +1,119 @@
+html {
+  font-family: $font-sans;
+  font-size: $em-base;
+  color: $text-color;
+}
+
+body {
+  font-size: $base-font-size;
+}
+
+p {
+  line-height: $base-line-height;
+  margin: {
+    top: 1em;
+    bottom: 1em;
+  }
+}
+
+
+a {
+    color: $link-color;
+    text-decoration: none;
+
+    &:visited {
+        color: $color-visited;
+    }
+
+    &:hover, 
+    &:active {
+        color: $color-focus;
+        text-decoration: underline;
+    }
+
+    &:focus {
+        box-shadow: $focus-shadow;
+        outline: 0;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+  font-family: $font-serif;
+  line-height: $heading-line-height;
+  color: $header-color;
+  margin: {
+    top: 1em;
+    bottom: .5em;
+  }
+}
+
+// Create heading mixins 
+@mixin title {
+  font-size: $title-font-size;
+  font-weight: $font-bold;
+}
+
+@mixin h1 {
+  font-size: $h1-font-size;
+  font-weight: $font-bold;
+}
+
+@mixin h2 {
+  font-size: $h2-font-size;
+  font-weight: $font-bold;
+}
+
+@mixin h3 {
+  font-size: $h3-font-size;
+  font-weight: $font-bold;
+}
+
+@mixin h4 {
+  font-size: $h4-font-size;
+  font-weight: $font-bold;
+}
+
+@mixin h5 {
+  font-size: $h5-font-size;
+  font-weight: $font-bold;
+}
+
+@mixin h6 {
+  font-family: $font-sans;
+  font-size: $h6-font-size;
+  font-weight: $font-normal;
+  text-transform: uppercase;
+}
+
+h1 {
+  @include h1();
+}
+
+h2 {
+  @include h2();
+}
+
+h3 {
+  @include h3();
+}
+
+h4 {
+  @include h4();
+}
+
+h5 {
+  @include h5();
+}
+
+h6 {
+  @include h6(); 
+}
+
+// Remove user agent styles
+cite, 
+var, 
+address, 
+dfn {
+ font-style: normal;
+}

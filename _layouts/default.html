@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body>
+    <h1 class="page-title">St. Michael Lutheran Church</h1>
+
+    {% include header.html %}
+    {% if page.url == "/" || page.url == "/index.html" %}
+
+      <section id="Introduction" data-type="background">
+          <h2 class="content-title">Introduction</h2>
+    	    <div class="hero">
+    	    	<div class="hero-content">
+              <img src="/img/st-micheals-homepage-logo.png" alt="St. Michael Lutheran Church Homepage Logo" />
+            </div>
+    	    </div>
+      </section>
+
+    {% endif %}
+
+    <main role="main" class="wrapper">
+        {{ content }}
+    </main>
+
+    {% include footer.html %}
+
+    {% if page.url == "/" || page.url == "/index.html" %}
+      <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+      </div>
+      <div id="preload">
+          <img src="/img/saint_micheals_church_home.png" width="1" height="1" alt="Image 01" />
+          <img src="/img/st-micheals-homepage-logo.png" width="1" height="1" alt="Image 02" />
+      </div>
+    {% endif %}
+    <script type="text/javascript" src="/js/main.js"></script>
+  </body>
+</html>

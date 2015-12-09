@@ -1,0 +1,32 @@
+<footer class="site-footer">
+  <div class="wrapper">
+    <div class="grid">
+     <div class="site-footer-left">
+        <a href="{{ site.baseurl }}/" title="{{ site.title }}">
+            <img src="{{site.baseurl}}/img/logo-200.png" alt="{{ site.title }}' Logo">
+        </a>
+     </div>
+     <div class="site-footer-middle">
+       
+       <ul class="site-footer-menu-list">
+            {% for my_page in site.pages %}
+          {% if my_page.title %}
+          <li> <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.link-title }}</a></li>
+          {% endif %}
+        {% endfor %}
+          </ul>
+     </div>
+     <div class="site-footer-right">
+      <h5>Worship Times</h5>
+      Sunday at <br>
+      8:30 &amp; 11:00 AM
+      <h5>Sunday School</h5>
+      Sunday at <br>
+      9:45 AM
+     </div>
+     <div class="site-footer-right">
+      <h5>Contact Us</h5>
+       <address>{{ site.street_address }} <br> {{ site.county }}, {{ site.state }} {{ site.zipcode }} <br> <br>757-427-5088 <br> <a href="mailto:{{ site.email }}">{{ site.email }}</a> </address>
+     </div>
+  </div>
+</footer>

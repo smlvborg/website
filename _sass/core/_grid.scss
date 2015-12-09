@@ -1,0 +1,68 @@
+/**
+ * Grid
+ */
+
+ // Only use this for dynamically generated content
+.grid {
+	@include span-columns(12);
+	
+	.grid-one-wide, .grid-two-wide, .grid-three-wide, 
+	.grid-four-wide, .grid-five-wide,  .grid-six-wide, 
+	.grid-seven-wide, .grid-eight-wide, .grid-nine-wide,
+	.grid-ten-wide, .grid-eleven-wide {
+	    @include media($small) {
+	        @include span-columns(12 of 12);
+	    }
+ 	}
+
+ 	@include media($large) {
+	    .grid-one-wide {
+			@include span-columns(1 of 12);
+		}
+
+		.grid-two-wide {
+			@include span-columns(2 of 12);
+		}
+
+		.grid-three-wide {
+			@include span-columns(3 of 12);
+		}
+
+		.grid-four-wide {
+			@include span-columns(4 of 12);
+		}
+
+		.grid-five-wide {
+			@include span-columns(5 of 12);
+		}
+
+		.grid-six-wide {
+			@include span-columns(6 of 12);
+		}
+
+		.grid-seven-wide {
+			@include span-columns(7 of 12);
+		}
+
+		.grid-eight-wide {
+			@include span-columns(8 of 12);
+		}
+
+		.grid-nine-wide {
+			@include span-columns(9 of 12);
+		}
+
+		.grid-ten-wide {
+			@include span-columns(10 of 12);
+		}
+
+		.grid-eleven-wide {
+			@include span-columns(11 of 12);
+		}
+
+		.grid-tweleve-wide {
+			@include span-columns(11 of 12);
+		}
+	}
+	
+}
