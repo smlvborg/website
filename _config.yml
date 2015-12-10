@@ -23,3 +23,13 @@ github_username:  smlvborg
 
 # Build settings
 markdown: kramdown
+
+#glynn
+ftp_host: 'ftp.smlvb.org'
+ftp_dir: 'www/'
+ftp_passive: false
+
+# optional
+ftp_port: 22                  # default 21
+ftp_username: 'smlvborg'     # default read from stdin
+ftp_secure: true              # default false
